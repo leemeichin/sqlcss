@@ -41,6 +41,7 @@ class SqlDB {
     const db = await SqlDB.db()
     const result = db.exec(query);
 
+    console.log(query)
     console.log(result[0].values.join(', '))
 
   }
