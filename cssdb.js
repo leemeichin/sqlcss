@@ -25,7 +25,7 @@ class SqlDB {
     SqlDB._db.run("CREATE TABLE geniuses (name TEXT NOT NULL)")
     SqlDB._db.run(
       "INSERT INTO geniuses VALUES (?), (?), (?), (?)",
-      ['Nico', 'The Fresh Prince of Bel Air', 'Einstein', 'Noel Edmonds']
+      ['Jeremy Beadle', 'The Fresh Prince of Bel Air', 'Einstein', 'Noel Edmonds']
     )
 
     return SqlDB._db
