@@ -1,11 +1,3 @@
-# css-db
-
-Connect to a database and render a query result via CSS.
-
-------
-
-## Licenses
-
 ### sql.js
 
 MIT license

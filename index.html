@@ -2,52 +2,46 @@
 <html>
 
 <head>
-  <title>CSS DB</title>
+  <title>SQL CSS</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet" />
 
-  <script src="https://unpkg.com/css-paint-polyfill@next/dist/css-paint-polyfill.js"></script>
-
-  <script type="module">
-    CSS.paintWorklet.addModule('./cssdb.js');
-  </script>
-
-  <style>
-    body {
-      width: 100vw;
-      height: 100vh;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-      font-family: sans-serif;
-      color: #f5f5f5;
-    }
-
-    h1 {
-      font-size: 72px;
-    }
-
-    a {
-      color: #f5f5f5;
-    }
-
-    main {
-      width: 100%;
-      height: 100%;
-      margin: 0 auto;
-      padding-top: 30px;
-      --sql-query: SELECT name FROM geniuses;
-      background: paint(sql-db);
-    }
-  </style>
+  <script type="module" src="js/listener.js"></script>
 </head>
 
 <body>
   <main>
-    <h1>SQL in CSS</h1>
-    <small><a href="https://git.sr.ht/~mrlee/css-sql">https://git.sr.ht/~mrlee/css-sql</a></small>
+    <div class="query-display">
+    </div>
+    <div class="query-controls">
+      <h1>SQL in CSS</h1>
+
+      <label for="db-upload">
+        Select an SQLite file (e.g. <a
+          href="https://github.com/lerocha/chinook-database/raw/master/ChinookDatabase/DataSources/Chinook_Sqlite.sqlite">Chinook
+          SQLite</a>)
+      </label>
+
+      <input class="form-input" name="db-upload" id="db-upload" type="file">
+
+      <label for="db-query">
+        then, write an SQL query
+      </label>
+
+      <textarea class="form-input" name="db-query" id="db-query" rows="10"
+        placeholder="Robert'); DROP TABLE Students;--"></textarea>
+
+      <label for="db-submit">
+        and submit it!
+      </label>
+
+      <button type="submit" id="db-submit" name="db-submit" class="form-input">Submit!</button>
+
+      <small class="git-repo"><a href="https://git.sr.ht/~mrlee/css-sql">https://git.sr.ht/~mrlee/css-sql</a></small>
+    </div>
   </main>
 </body>
 
