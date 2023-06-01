@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>SQL CSS</title>
+  <link href="css/main.css" rel="stylesheet" />
+
+  <script type="module" src="js/listener.js"></script>
+</head>
+
+<body>
+  <main>
+    <div class="query-display">
+    </div>
+    <div class="query-controls">
+      <h1>SQL in CSS</h1>
+
+      <label for="db-upload">
+        Select an SQLite file (e.g. <a
+          href="https://github.com/lerocha/chinook-database/raw/master/ChinookDatabase/DataSources/Chinook_Sqlite.sqlite">Chinook
+          SQLite</a>)
+      </label>
+
+      <input class="form-input" name="db-upload" id="db-upload" type="file">
+
+      <label for="db-query">
+        then, write an SQL query
+      </label>
+
+      <textarea class="form-input" name="db-query" id="db-query" rows="10"
+        placeholder="Robert'); DROP TABLE Students;--"></textarea>
+
+      <label for="db-submit">
+        and submit it!
+      </label>
+
+      <button type="submit" id="db-submit" name="db-submit" class="form-input">Submit!</button>
+
+      <small class="git-repo"><a href="https://github.com/leemeichin/sqlcss.xyz">https://github.com/leemeichin/sqlcss.xyz</a></small>
+    </div>
+  </main>
+</body>
+
+</html>
